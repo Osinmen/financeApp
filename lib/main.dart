@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:porfolio/constants.dart';
 import 'package:porfolio/pages/home.dart';
+import 'package:porfolio/pages/login.dart';
+import 'package:porfolio/pages/test.dart';
 import 'package:porfolio/pages/tester.dart';
 
 void main() {
@@ -14,10 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: appTheme,
-      home: const Tester(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: appTheme,
+        home: const Tester());
   }
 }

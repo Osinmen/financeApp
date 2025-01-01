@@ -1,5 +1,4 @@
-import "package:flutter/material.dart";
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/material.dart';
 
 class Test extends StatefulWidget {
   const Test({super.key});
@@ -9,22 +8,53 @@ class Test extends StatefulWidget {
 }
 
 class _TestState extends State<Test> {
-  // https://pro-api.coingecko.com/api/v3/ping?x_cg_pro_api_key=YOUR_API_KEY
-
   @override
   Widget build(BuildContext context) {
+    double screenlenght = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              colors: [Color(0xFF1B232A), Color(0xFF5ED5A8)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              stops: [0.9, 0.1]),
-          color: Color(0xFF1B232A),
-        ),
-        child: Center(
-          child: SvgPicture.asset("assets/svg.svg"),
+      body: Align(
+        alignment: Alignment.bottomCenter,
+        child: DefaultTabController(
+          length: 3,
+          child: Container(
+            height: screenlenght * 0.7,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(15), topRight: Radius.circular(15)),
+              color: Colors.red,
+            ),
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(15),
+                            topRight: Radius.circular(15))),
+                    child: TabBar(
+                        indicator: UnderlineTabIndicator(
+                            borderSide:
+                                BorderSide(width: 4.0, color: Colors.black),
+                            insets: const EdgeInsets.symmetric(horizontal: 15)),
+                        tabs: [
+                          Tab(
+                            icon: Icon(Icons.home),
+                          ),
+                          Tab(
+                            icon: Icon(Icons.search),
+                          )
+                        ]),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Text("na you be net")
+              ],
+            ),
+          ),
         ),
       ),
     );

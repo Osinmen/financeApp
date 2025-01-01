@@ -6,7 +6,6 @@ Container _customButton() {
 }
 
 ThemeData appTheme = ThemeData(
-    primaryColor: Colors.red,
     textTheme: TextTheme(
         bodyMedium: TextStyle(
             fontSize: 11, color: Colors.black, fontWeight: FontWeight.bold),
