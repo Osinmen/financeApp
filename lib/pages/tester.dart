@@ -57,17 +57,9 @@ class _TesterState extends State<Tester> {
                       ]),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
-                Text("Hey"),
-                const SizedBox(
-                  height: 50,
-                ),
-                Text("dont do this to me"),
-                const SizedBox(
-                  height: 50,
-                ),
-                Text("last")
+                Container()
               ],
             ),
           ),

@@ -27,3 +27,18 @@ ThemeData appTheme = ThemeData(
 
 Color primaryPurple = Color(0XFF62248F);
 Color lineColor = Color(0XFFE0E0E0);
+
+Widget build(BuildContext context) {
+  var screenHeight = MediaQuery.of(context).size.height;
+  var screenWidth = MediaQuery.of(context).size.width;
+  var screenPadding = MediaQuery.of(context).padding;
+  return Container();
+}
+
+double adaptiveWidth(BuildContext context, double percentage) {
+  return MediaQuery.of(context).size.width * percentage;
+}
+
+double adaptiveHeight(BuildContext context, double percentage) {
+  return MediaQuery.of(context).size.height * percentage;
+}
