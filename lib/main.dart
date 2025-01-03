@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:porfolio/awa.dart';
 import 'package:porfolio/constants.dart';
-import 'package:porfolio/pages/home.dart';
 import 'package:porfolio/pages/login.dart';
-import 'package:porfolio/pages/test.dart';
-import 'package:porfolio/pages/tester.dart';
 
 void main() {
   runApp(const MyApp());
