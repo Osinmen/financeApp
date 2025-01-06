@@ -35,10 +35,62 @@ Widget build(BuildContext context) {
   return Container();
 }
 
-double adaptiveWidth(BuildContext context, double percentage) {
-  return MediaQuery.of(context).size.width * percentage;
+Padding paddingarrowIcon() {
+  return Padding(
+    padding: const EdgeInsets.only(top: 20, left: 20),
+    child: Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(color: Colors.grey)),
+      height: 48,
+      width: 48,
+      child: Icon(
+        Icons.arrow_back,
+        color: Colors.white,
+      ),
+    ),
+  );
 }
 
-double adaptiveHeight(BuildContext context, double percentage) {
-  return MediaQuery.of(context).size.height * percentage;
+//padding fot the texts at the beginnning
+Padding paddinText() {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 20),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              "Back at your finger tips",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 17,
+                  fontWeight: FontWeight.w100),
+            ),
+            const SizedBox(height: 7),
+            Text(
+              "Login Method",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 23,
+                  fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
+        Container(
+          padding: const EdgeInsets.all(7),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              border: Border.all(color: Colors.white, width: 2)),
+          child: Image.asset(
+            "assets/majorLogo.png",
+            width: 48,
+            height: 48,
+          ),
+        )
+      ],
+    ),
+  );
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:porfolio/constants.dart';
+import 'package:porfolio/Widgets/formfieldpadding.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -129,106 +130,17 @@ class _LoginState extends State<Login> {
                           children: [
                             Column(
                               children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 20),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: <Widget>[
-                                      SizedBox(
-                                        height: 50,
-                                        width: 50,
-                                        child: TextFormField(
-                                          textAlign: TextAlign.center,
-                                          decoration: InputDecoration(
-                                              hintText: "-",
-                                              border: InputBorder.none,
-                                              focusedBorder: OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                      color: lineColor,
-                                                      width: 1.5)),
-                                              enabledBorder: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(7),
-                                                  borderSide: BorderSide(
-                                                      color: lineColor,
-                                                      width: 1.5))),
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 50,
-                                        width: 50,
-                                        child: TextFormField(
-                                          textAlign: TextAlign.center,
-                                          decoration: InputDecoration(
-                                              hintText: "-",
-                                              border: InputBorder.none,
-                                              focusedBorder: OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                      color: lineColor,
-                                                      width: 1.5)),
-                                              enabledBorder: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(7),
-                                                  borderSide: BorderSide(
-                                                      color: lineColor,
-                                                      width: 1.5))),
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 50,
-                                        width: 50,
-                                        child: TextFormField(
-                                          textAlign: TextAlign.center,
-                                          decoration: InputDecoration(
-                                              hintText: "-",
-                                              border: InputBorder.none,
-                                              focusedBorder: OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                      color: lineColor,
-                                                      width: 1.5)),
-                                              enabledBorder: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(7),
-                                                  borderSide: BorderSide(
-                                                      color: lineColor,
-                                                      width: 1.5))),
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 50,
-                                        width: 50,
-                                        child: TextFormField(
-                                          textAlign: TextAlign.center,
-                                          decoration: InputDecoration(
-                                              hintText: "-",
-                                              border: InputBorder.none,
-                                              focusedBorder: OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                      color: lineColor,
-                                                      width: 1.5)),
-                                              enabledBorder: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(7),
-                                                  borderSide: BorderSide(
-                                                      color: lineColor,
-                                                      width: 1.5))),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
+                                FormFieldPadding(),
                                 const SizedBox(
-                                  height: 20,
+                                  height: 15,
                                 ),
                                 Text(
                                   "Forgot MPIN?",
                                   style: TextStyle(
-                                      color: primaryPurple, fontSize: 14),
+                                      color: primaryPurple, fontSize: 13),
                                 ),
                                 const SizedBox(
-                                  height: 20,
+                                  height: 15,
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.symmetric(
@@ -247,7 +159,7 @@ class _LoginState extends State<Login> {
                                   ),
                                 ),
                                 const SizedBox(
-                                  height: 20,
+                                  height: 15,
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.symmetric(
@@ -261,12 +173,58 @@ class _LoginState extends State<Login> {
                                         color: Colors.white,
                                         borderRadius: BorderRadius.circular(8)),
                                     alignment: Alignment.center,
-                                    child: Text(
-                                      "Login",
-                                      style: TextStyle(color: Colors.white),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset("assets/faceid.png"),
+                                          const SizedBox(
+                                            width: 10,
+                                          ),
+                                          Text(
+                                            "Login with face ID",
+                                            style:
+                                                TextStyle(color: Colors.black),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
+                                Spacer(),
+                                Text(
+                                  "Create an account?",
+                                  style: TextStyle(
+                                      color: primaryPurple, fontSize: 14),
+                                ),
+                                const SizedBox(
+                                  height: 40,
+                                ),
+                                Align(
+                                  alignment: Alignment.bottomCenter,
+                                  child: Container(
+                                    height: 60,
+                                    width: double.infinity,
+                                    color: lineColor,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Image.asset(
+                                            "assets/lock_black_24dp 1.png"),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          "Secure Banking - Privacy Policy",
+                                          style: TextStyle(fontSize: 10),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                )
                               ],
                             ),
                             Text("this is to test the second one")
