@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:porfolio/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:porfolio/Widgets/textfieldSearch.dart';
+import 'package:porfolio/Widgets/topRow.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -35,43 +37,14 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
-
     return SafeArea(
       child: Scaffold(
         body: Padding(
           padding: EdgeInsets.all(20),
           child: Column(
             children: [
-              // Header Row with Menu, App Name, and Notification Icon
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        shape: BoxShape.rectangle,
-                        border: Border.all(color: lineColor),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Icon(Icons.menu),
-                  ),
-                  Text(
-                    "FNBC",
-                    style: TextStyle(
-                        letterSpacing: 2.0,
-                        color: primaryPurple,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24),
-                  ),
-                  Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          border: Border.all(color: lineColor),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Image.asset("assets/mainbell.jpg"))
-                ],
-              ),
+              TopRow(), // Header Row with Menu, App Name, and Notification Icon
               const SizedBox(height: 20),
-
               // Horizontal ListView for Account Information
               Container(
                 height: screenHeight * 0.23,
@@ -124,28 +97,8 @@ class _HomeState extends State<Home> {
                 ),
               ),
               const SizedBox(height: 20),
-
               // Search TextField
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(color: lineColor),
-                    borderRadius: BorderRadius.circular(10)),
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: "Search here...",
-                    hintStyle: TextStyle(
-                        color: lineColor, fontWeight: FontWeight.w300),
-                    prefixIcon: Image.asset("assets/searchButton.png"),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    contentPadding: const EdgeInsets.only(left: 20),
-                  ),
-                ),
-              ),
+              TextFieldSearch(),
               const SizedBox(height: 15),
 
               // Quick Access Title and View All Text

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:porfolio/constants.dart';
+import 'package:porfolio/pages/home.dart';
 import 'package:porfolio/pages/login.dart';
+import 'package:porfolio/pages/something.dart';
+import 'package:porfolio/pages/splashPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +19,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: appTheme,
-        home: const Login());
+        home: const Home());
   }
 }
